@@ -74,7 +74,7 @@ class Level:
         self.obstacles_sprites = pygame.sprite.Group()
 
         # sprite setup
-        self.create_map
+        self.create_map()
     
     def create_map(self):
         for row in WORLD_MAP:
