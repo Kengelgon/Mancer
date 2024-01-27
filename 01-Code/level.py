@@ -1,4 +1,5 @@
 import pygame
+<<<<<<< HEAD
 from settings import *
 from tile import Tile
 from player import Player
@@ -56,3 +57,19 @@ class YSortCameraGroup(pygame.sprite.Group):
         for sprite in sorted(self.sprites(), key=lambda sprite: sprite.rect.centery):
             offset_pos = sprite.rect.topleft - self.offset
             self.display_surface.blit(sprite.image, offset_pos)
+=======
+
+class Level:
+    def __init__(self):
+        
+        # get the display surface
+        self.display_surface = pygame.display.get_surface()
+        
+        # sprite group setup
+        self.visible_sprites = pygame.sprite.Group()
+        self.obstacles_sprites = pygame.sprite.Group()
+
+    def run(self):
+        # update and draw the game
+        pass
+>>>>>>> bddc62a (Add level, player, and tile classes for testing)
