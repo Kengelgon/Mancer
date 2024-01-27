@@ -4,6 +4,7 @@ import pygame
 from settings import *
 from tile import Tile
 from player import Player
+<<<<<<< HEAD
 from debug import debug
 
 
@@ -62,6 +63,8 @@ class YSortCameraGroup(pygame.sprite.Group):
 =======
 from settings import *
 >>>>>>> 23740b1 (Add world map to level)
+=======
+>>>>>>> d28a5a2 (Add test graphic files)
 
 class Level:
     def __init__(self):
@@ -78,8 +81,11 @@ class Level:
     
     def create_map(self):
         for row_index,row in enumerate(WORLD_MAP):
-            print(row_index)
-            print(row)
+            for col_index, col in enumerate(row):
+                x = col_index * TILESIZE
+                y = row_index * TILESIZE
+                if col == 'x':
+                    Tile((x,y),[self.visible_sprites])
 
     def run(self):
         # update and draw the game
