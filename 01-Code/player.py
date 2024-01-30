@@ -27,4 +27,4 @@ class Player(pygame.sprite.Sprite):
             self.direction.x = 0
 
     def update(self):
-        self.input
+        self.input()
