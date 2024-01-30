@@ -5,6 +5,7 @@ from settings import *
 from tile import Tile
 from player import Player
 <<<<<<< HEAD
+<<<<<<< HEAD
 from debug import debug
 
 
@@ -65,6 +66,9 @@ from settings import *
 >>>>>>> 23740b1 (Add world map to level)
 =======
 >>>>>>> d28a5a2 (Add test graphic files)
+=======
+from debug import debug
+>>>>>>> 0c0c3ba (Test push)
 
 class Level:
     def __init__(self):
@@ -87,13 +91,19 @@ class Level:
                 if col == 'x':
                     Tile((x,y),[self.visible_sprites,self.obstacle_sprites])
                 if col == 'p':
-                    Player((x,y),[self.visible_sprites])
+                    self.player = Player((x,y),[self.visible_sprites])
 
     def run(self):
         # update and draw the game
+<<<<<<< HEAD
 <<<<<<< HEAD
         pass
 >>>>>>> bddc62a (Add level, player, and tile classes for testing)
 =======
         self.visible_sprites.draw(self.display_surface)
 >>>>>>> af174e5 (Update spelling for obstacle sprite and add player location)
+=======
+        self.visible_sprites.draw(self.display_surface)
+        self.visible_sprites.update()
+        debug(self.player.direction)
+>>>>>>> 0c0c3ba (Test push)
