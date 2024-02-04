@@ -5,9 +5,9 @@ from settings import *
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups, obstacle_sprites):
         super().__init__(groups)
-        self.image = pygame.image.load("03-Graphics/test/player.png").convert_alpha()
-        self.rect = self.image.get_rect(topleft=pos)
-        self.hitbox = self.rect.inflate(0, -26)
+        self.image = pygame.image.load('03-Graphics/Mancer/Player02.png').convert_alpha()
+        self.rect = self.image.get_rect(topleft = pos)
+        self.hitbox = self.rect.inflate(-48,-26)
 
         self.direction = pygame.math.Vector2()
         self.speed = 5
