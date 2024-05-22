@@ -1,9 +1,7 @@
 # Mancer
-Utilizing the python tutorial by ClearCode to create a Zelda styled game in Python using Pygame
-https://www.youtube.com/watch?v=QU1pPzEGrqw
 
 ## Story Concepts
-- The three elements have been corrupted by evil mancers
+- The three Modes have been corrupted by evil mancers
 - The land is hositle and plunged into chaos
 - The player must defeat the Elemntal Mancer to return order to the natural world
 - Once a Mode is purified the player is blessed with a new power
