@@ -2,9 +2,6 @@ import pygame
 from settings import *
 from spritesheet import SpriteSheet
 
-
-
-
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups, obstacle_sprites):
         super().__init__(groups)
@@ -13,10 +10,10 @@ class Player(pygame.sprite.Sprite):
         ).convert_alpha()
         self.rect = self.image.get_rect(topleft=pos)
         self.hitbox = self.rect.inflate(-48, -26)
-        self.image = pygame.image.load('03-Graphics/test/player.png').convert_alpha()
+        self.image = pygame.image.load('03-Graphics/Mancer/Player02.png').convert_alpha()
         self.rect = self.image.get_rect(topleft = pos)
         self.hitbox = self.rect.inflate(0,-26)
-        self.image = pygame.image.load("03-Graphics/test/player.png").convert_alpha()
+        self.image = pygame.image.load("03-Graphics/Mancer/Player02.png").convert_alpha()
         self.rect = self.image.get_rect(topleft=pos)
         self.hitbox = self.rect.inflate(0, -26)
 
@@ -51,23 +48,6 @@ class Player(pygame.sprite.Sprite):
         self.hitbox.y += self.direction.y * speed
         self.collision("vertical")
         self.rect.center = self.hitbox.center
-
-    def collision(self, direction):
-        if direction == "horizontal":
-            for sprite in self.obstacle_sprites:
-                if sprite.hitbox.colliderect(self.hitbox):
-                    if self.direction.x > 0:  # moving right
-                        self.hitbox.right = sprite.hitbox.left
-                    if self.direction.x < 0:  # moving left
-                        self.hitbox.left = sprite.hitbox.right
-
-        if direction == "vertical":
-            for sprite in self.obstacle_sprites:
-                if sprite.hitbox.colliderect(self.hitbox):
-                    if self.direction.y > 0:  # moving down
-                        self.hitbox.bottom = sprite.hitbox.top
-                    if self.direction.y < 0:  # moving up
-                        self.hitbox.top = sprite.hitbox.bottom
 
     def collision(self, direction):
         if direction == "horizontal":
