@@ -1,15 +1,9 @@
 import pygame
-<<<<<<< HEAD
-<<<<<<< HEAD
 from settings import *
 from tile import Tile
 from player import Player
-<<<<<<< HEAD
-<<<<<<< HEAD
 from debug import debug
 
-
-<<<<<<< HEAD
 class Level:
     def __init__(self):
 
@@ -61,18 +55,8 @@ class YSortCameraGroup(pygame.sprite.Group):
         for sprite in sorted(self.sprites(), key=lambda sprite: sprite.rect.centery):
             offset_pos = sprite.rect.topleft - self.offset
             self.display_surface.blit(sprite.image, offset_pos)
-=======
-=======
 from settings import *
->>>>>>> 23740b1 (Add world map to level)
-=======
->>>>>>> d28a5a2 (Add test graphic files)
-=======
 from debug import debug
->>>>>>> 0c0c3ba (Test push)
-
-=======
->>>>>>> 372ab40 (Add make file)
 class Level:
     def __init__(self):
 
@@ -100,20 +84,10 @@ class Level:
 
     def run(self):
         # update and draw the game
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        pass
->>>>>>> bddc62a (Add level, player, and tile classes for testing)
-=======
         self.visible_sprites.draw(self.display_surface)
->>>>>>> af174e5 (Update spelling for obstacle sprite and add player location)
-=======
         self.visible_sprites.draw(self.display_surface)
         self.visible_sprites.update()
         debug(self.player.direction)
->>>>>>> 0c0c3ba (Test push)
-=======
         self.visible_sprites.custom_draw(self.player)
         self.visible_sprites.update()
 
@@ -137,9 +111,5 @@ class YSortCameraGroup(pygame.sprite.Group):
         # for sprite in self.sprites():
         for sprite in sorted(self.sprites(), key=lambda sprite: sprite.rect.centery):
             offset_pos = sprite.rect.topleft - self.offset
-<<<<<<< HEAD
             self.display_surface.blit(sprite.image,offset_pos)
->>>>>>> b5c4339 (Add camera that follows player)
-=======
             self.display_surface.blit(sprite.image, offset_pos)
->>>>>>> 372ab40 (Add make file)
